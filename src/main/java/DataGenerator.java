@@ -6,9 +6,6 @@ import ru.netology.delivery.Data.data.NewUserChar;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.io.FileReader;
-import java.util.Scanner;
-
 
 public class DataGenerator {
     public static NewUserChar generateNewUser(String locale, int plusDays) {
