@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 
 public class DataGenerator {
-    public static NewUserChar generateNewUser(String locale, int shiftDay) {
-        return new NewUserChar(generateCity(locale), generateDate(shiftDay), generateName(locale), generatePhone(locale));
+    public static NewUserChar generateNewUser(String locale, int plusDays) {
+        return new NewUserChar(generateCity(locale), generateDate(plusDays), generateName(locale), generatePhone(locale));
     }
 
     public static String generateCity(String locale) {
