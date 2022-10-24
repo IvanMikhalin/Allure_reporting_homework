@@ -15,8 +15,11 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation 'com.codeborne:selenide:6.8.1'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+
 }
 
 test {

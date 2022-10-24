@@ -21,8 +21,7 @@ build/
 out/
 /.idea
 .idea/
-*.idea
-idea/
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -47,4 +46,3 @@ idea/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-!artifacts/app-card-delivery.jar
