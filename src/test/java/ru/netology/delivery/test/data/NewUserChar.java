@@ -1,10 +1,9 @@
-package ru.netology.delivery.Data.data;
+package ru.netology.delivery.test.data;
 
 public class NewUserChar {
 
-    public NewUserChar(String city, String data, String name, String phone) {
+    public NewUserChar(String city, String name, String phone) {
         this.city = city;
-        this.data = data;
         this.name = name;
         this.phone = phone;
     }
@@ -14,12 +13,6 @@ public class NewUserChar {
     }
 
     private final String city;
-
-    public String getData() {
-        return data;
-    }
-
-    private final String data;
 
     public String getName() {
         return name;

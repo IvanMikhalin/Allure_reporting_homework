@@ -1,15 +1,22 @@
-package ru.netology.delivery.generator;
+package ru.netology.delivery.test.data;
 
 import com.github.javafaker.Faker;
-import ru.netology.delivery.Data.data.NewUserChar;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataGenerator {
-    public static NewUserChar generateNewUser(String locale, int plusDays) {
-        return new NewUserChar(generateCity(locale), generateDate(plusDays), generateName(locale), generatePhone(locale));
+    public static NewUserChar generateNewUser(String locale) {
+        return new NewUserChar(generateCity(locale), generateName(locale), generatePhone(locale));
+    }
+
+    public static DateGenerator generateNewDate(int plusDays) {
+        return new DateGenerator(generateDate(plusDays));
+    }
+
+    public static String generateDate(int addDays) {
+        return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public static String generateCity(String locale) {
@@ -19,10 +26,6 @@ public class DataGenerator {
         };
         Faker faker = new Faker(new Locale(locale));
         return cities[faker.number().numberBetween(0, cities.length - 1)];
-    }
-
-    public static String generateDate(int addDays) {
-        return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public static String generateName(String locale) {
