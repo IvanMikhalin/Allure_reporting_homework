@@ -50,7 +50,7 @@ public class CardOrderingTest {
         $("[data-test-id='phone'] input").setValue(user.getPhone());
         $("[data-test-id='agreement']").click();
         $(".button_size_m").click();
-        $("[data-test-id='success-notification'").should(visible, ofSeconds(15)).shouldHave(text("Встреча успешно запланирована на " + date.getData()));
+        $("[data-test-id='success-notification'").should(visible, ofSeconds(15)).shouldHave(text("текст, которого там нет" + date.getData())); //Встреча успешно запланирована на
     }
 
 
